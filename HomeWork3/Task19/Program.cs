@@ -5,7 +5,7 @@
 // 12821 -> да
 
 Console.Clear();
-Console.WriteLine("Введите число: ");
+Console.WriteLine("Введите пятизначное число: ");
 string? number = Console.ReadLine();
 
 void inputNumber(string number)
@@ -21,4 +21,4 @@ if (number!.Length == 5)
 {
     inputNumber(number);
 }
-else Console.WriteLine($"Введи правильное число");
+else Console.WriteLine($"Введёное число не пятизначное, введите корретное число");
