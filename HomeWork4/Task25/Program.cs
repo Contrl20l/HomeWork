@@ -11,9 +11,12 @@ Console.WriteLine("введите число B");
 int numberB = Convert.ToInt32(Console.ReadLine());
 // int numberB = int.Parse(Console.ReadLine()); (для доп варианта, чтобы лучше запомнить)
 int result = numberA;
+Console.Clear();
 
 for (int i = 1; i < numberB; i++)
 {
 result = result * numberA;
 }
-Console.WriteLine("Результат: " + result);
+// Console.WriteLine(numberA+" в степини " + numberB + " -> " + result);
+Console.WriteLine(numberA+", " + numberB + " -> " + result);
+// Console.WriteLine( "Ответ:" + + result);
