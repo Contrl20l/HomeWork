@@ -4,7 +4,7 @@
 // 9012 -> 12
 
 Console.Clear();
-Console.WriteLine("введите число N: ");
+Console.WriteLine("Введите число: ");
 int number = Convert.ToInt32(Console.ReadLine());
 int sum = 0;
 
@@ -14,7 +14,7 @@ while (number > 0)
     number = number / 10;
     sum = sum + num;
 }
-Console.WriteLine("Сумма цифр в числе: "  + sum);
+Console.WriteLine("Сумма цифр в числе: " + sum);
 
 
 
