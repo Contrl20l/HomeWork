@@ -5,13 +5,13 @@
 
 Console.Clear();
 Console.WriteLine("введите число N: ");
-int namber = Convert.ToInt32(Console.ReadLine());
+int number = Convert.ToInt32(Console.ReadLine());
 int sum = 0;
 
-while (namber > 0)
+while (number > 0)
 {
-    int num = namber % 10;
-    namber = namber / 10;
+    int num = number % 10;
+    number = number / 10;
     sum = sum + num;
 }
 Console.WriteLine("Сумма цифр в числе: "  + sum);
