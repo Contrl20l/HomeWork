@@ -2,6 +2,7 @@
 // количество чётных чисел в массиве.
 //[345, 897, 568, 234] -> 2
 
+Console.Clear();
 Console.WriteLine("Введите размер массива");
 int size = Convert.ToInt32(Console.ReadLine());
 int[] numbers = new int[size];
@@ -14,7 +15,7 @@ for (int z = 0; z < numbers.Length; z++)
 if (numbers[z] % 2 == 0)
 count++;
 
-Console.WriteLine($"всего в масиве {numbers.Length} чисел, {count} из них чётные");
+Console.WriteLine($"Всего в масиве {numbers.Length} чисел, {count} из них чётные");
 
 void FillArrayRandomNumbers(int[] numbers)
 {
@@ -25,10 +26,13 @@ void FillArrayRandomNumbers(int[] numbers)
 }
 void PrintArray(int[] numbers)
 {
-    Console.Write("[ ");
+    Console.Write("[");
     for(int i = 0; i < numbers.Length; i++)
     {
-        Console.Write(numbers[i] + " ");
+         if (i != size-1)
+   Console.Write(numbers[i] + ", ");
+   else
+   Console.Write(numbers[i]);
     }
     Console.Write("]");
     Console.WriteLine();
