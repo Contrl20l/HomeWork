@@ -12,12 +12,12 @@ Console.Write("Введите m: ");
 int m = Convert.ToInt32(Console.ReadLine());
 Console.Write("Введите n: ");
 int n = Convert.ToInt32(Console.ReadLine());
-Console.WriteLine($"m = {m}, n = {n}.");
+Console.WriteLine("Получившиеся массив:");
 
 double[,] array = new double[m, n];
 
 // Метод заполнения массива рандомными числами.
-void CreateArrayDouble(double[,] array)
+void FillArrayRandomNumbers(double[,] array)
 {
   for (int i = 0; i < m; i++)
   {
@@ -29,20 +29,22 @@ void CreateArrayDouble(double[,] array)
 }
 
 // Метод округления чисел до 1 цифры после запятой, и вывод ответа на консоль по столбам и строкам
-void WriteArray (double[,] array)
+void PrintArray (double[,] array)
 {
 for (int i = 0; i < m; i++)
   {
+    Console.Write("[ ");
       for (int j = 0; j < n; j++)
       {
         double alignNumber = Math.Round(array[i, j], 1);
         Console.Write(alignNumber + " ");
       }
+      Console.Write("]");
       Console.WriteLine();
   }
 }
 
 // Вывод ответа
-CreateArrayDouble(array);
-WriteArray(array);
+FillArrayRandomNumbers(array);
+PrintArray(array);
 Console.WriteLine();
