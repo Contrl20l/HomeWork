@@ -6,6 +6,8 @@
 // 5 9 2 3
 // 8 4 2 4
 
+Console.Clear();
+
 // Ввод размера массива с консоли
 Console.WriteLine("Размер строки массива: ");
 int a = Convert.ToInt32(Console.ReadLine());
@@ -57,8 +59,8 @@ void PrintArray(int[,] array)
 }
 
 PrintArray(numbers);
-// Метод определяет, есть ли значение в массиве или нет
 
+// Метод определяет, есть ли значение в массиве или нет
 if (n > numbers.GetLength(0) || m > numbers.GetLength(1))
 {
     Console.WriteLine("Такого элемента нет");
