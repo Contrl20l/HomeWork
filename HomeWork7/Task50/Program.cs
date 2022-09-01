@@ -6,16 +6,27 @@
 // 5 9 2 3
 // 8 4 2 4
 
-// Ввод данных
-Console.WriteLine("Введите m: ");
+// Ввод размера массива с консоли
+Console.WriteLine("Размер строки массива: ");
+int a = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Введите размер столбеца массива:");
+int b = Convert.ToInt32(Console.ReadLine());
+int[,] numbers = new int[a, b];
+
+// Ввод позиции значения в массиве
+Console.WriteLine("Введите строку: ");
 int n = Convert.ToInt32(Console.ReadLine());
-Console.WriteLine("Введите n:");
+Console.WriteLine("Введите столбец:");
 int m = Convert.ToInt32(Console.ReadLine());
 
-// Определение размера массива 10х10
-int[,] numbers = new int[10, 10];
+// Или определение размера массива 10х10
+// int[,] numbers = new int[10, 10];
 
 // Метод заполнения массива рандомными значенями
+
+Console.Clear();
+
+Console.WriteLine("Получившиеся массив:");
 
 void FillArrayRandomNumbers(int[,] array)
 {
@@ -30,7 +41,7 @@ void FillArrayRandomNumbers(int[,] array)
 
 FillArrayRandomNumbers(numbers);
 
-// метод придание массиву структурированного вида
+// метод придания массиву структурированного вида
 void PrintArray(int[,] array)
 {
     for (int i = 0; i < array.GetLength(0); i++)
@@ -46,7 +57,6 @@ void PrintArray(int[,] array)
 }
 
 PrintArray(numbers);
-
 // Метод определяет, есть ли значение в массиве или нет
 
 if (n > numbers.GetLength(0) || m > numbers.GetLength(1))
