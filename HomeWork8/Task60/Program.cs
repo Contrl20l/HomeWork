@@ -12,12 +12,13 @@ Console.WriteLine("Введите Y:");
 int y = Convert.ToInt32(Console.ReadLine());
 Console.WriteLine("Введите Z:");
 int z = Convert.ToInt32(Console.ReadLine());
+Console.Clear();
 int[,,] array3D = new int[x, y, z];
 
 //int[,,] array3D = new int[2, 2, 2];  // - для конкретного размера массива 
+Console.WriteLine("Получившиеся массив и координаты точек:");
 FillArray(array3D);
 PrintIndex(array3D);
- Console.WriteLine();
 // PrintArray(array3D);
 
 // Функция вывода индекса элементов 3D массива
@@ -32,10 +33,10 @@ void PrintIndex(int[,,] arr)
             {
                 Console.Write($"{array3D[i, j, k]}({i},{j},{k}) ");
             }
-        }
+       }
     }
 }
-
+ 
 // Функция заполнения 3D массива не повторяющимеся числами
 void FillArray(int[,,] arr)
 {
